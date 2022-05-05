@@ -1,0 +1,306 @@
+/*Enlevement de tout les margin et padding par defaut*/
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+/*Variables de couleur*/
+:root{
+    --Dark--black:#000000;
+    --Red--red:#B11313;
+    --Blue--black:#19587D;
+    --grey--color:#C4C4C4;
+    --Black--color:#0D0E09;
+    --White--color:#FFFFFF;
+    --Yellow--first: #FFFF00;
+    --Yeloow--second: #F8F184;
+    --red--white-degrad:#890008;
+    --Blue--white--degrad:#19587D;
+    --Yellow--white--degrad:#EDDEBF;
+}
+/*Variables de police*/
+:root{
+    --Rajdhani : 'Rajdhani','arial', sans serif;
+    --Space-Grotesk : 'Space Grotesk', 'arial', sans serif;
+}
+/*Background de tout le document*/
+body{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--Dark--black);
+    background-image: url(../Illustrations/Home/Bathome1.png);
+}
+/*Scrool*/
+.scrool{
+    top: 100px;
+    z-index: 3;
+    right: 50px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+}
+.scrool li{
+    margin: 8px 0;
+    display: block;
+}
+/*Barre de menu*/
+.barre{
+    display:flex;
+    padding: 2% 5%;
+    margin: 0 102px;
+    align-items: center;
+    border: 4px solid #BCBBBD;
+    justify-content: space-between;
+}
+.menu a{
+    font-size: 25px;
+    margin: 0 20px 0 0;
+    text-decoration: none;
+    color: var(--White--color);
+    font-family: var(--Space-Grotesk);
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+/*Texte d'introduction*/
+.introduction{
+    padding: 15% 0;
+    margin: 0 102px;
+    text-align: center;
+    color: var(--White--color);
+    border-left: 4px solid #BCBBBD;
+    border-right:4px solid #BCBBBD;
+}
+.center{
+    width: 30%;
+    margin: auto;
+    font-family: var(--Space-Grotesk);
+}
+.boutton{
+    margin: 2% 0;
+    font-size: 20px;
+    font-style: medium;
+}
+.btn1{
+    opacity: 0.6;
+    border: none;
+    margin: 0 15px;
+    padding: 10px 40px;
+    color: var(--White--color);
+    font-family: var(--Rajdhani);
+    background-image: linear-gradient(45deg, #eddebf, #890009);
+}
+
+/*Batman*/
+.batman{
+    margin: 0 102px;
+    padding: 0 100px; 
+    color: var(--White--color);
+    border-left: 4px solid #BCBBBD;
+    border-right: 4px solid #BCBBBD;
+}
+.image{
+    display: flex;
+    justify-content: space-between;
+}
+/*Transition*/
+.style{
+    position: relative;
+}
+.transition img{
+    width: 100%;
+}
+.contour{
+    top: 0;
+    z-index: 1;
+    height: 800px;
+    margin: 0 102px;
+    position: absolute;
+    color: transparent;
+    border-left: 4px solid #BCBBBD;
+    border-right: 4px solid #BCBBBD; 
+}
+/*nemesis*/
+.nemesis{
+    margin: 0 102px;
+    padding: 0 100px; 
+    color: var(--White--color);
+    border-left: 4px solid #BCBBBD;
+    border-right: 4px solid #BCBBBD;
+}
+.imageMe{
+    display: flex;
+    justify-content: space-between;
+}
+/*Multimedia*/
+.multimedia{
+    margin: 0 102px;
+    padding: 0 100px 100px 100px; 
+    color: var(--White--color);
+    border-left: 4px solid #BCBBBD;
+    border-right: 4px solid #BCBBBD;
+}
+.slide{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#action{
+    width: 50%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+
+}
+.sary{
+    width: 35%;
+}
+.description{
+    width: 65%;
+    padding-left: 15px;
+    border-radius: 0px 50px 50px 0px;
+    background-image: linear-gradient(135deg, #EDDEBF 1%, #19587D);
+}
+.sary img{
+   height: 100%;
+}
+/*Formule de contact*/
+.contact{
+    top: 0;
+    left: 20%;
+    z-index: 2;
+    width: 60%;
+    position: absolute;
+    text-align: center;
+    padding: 50px 0 75px 0;
+}
+.contact h2{
+    font-size: 36px;
+    font-style: medium;
+    margin: 0 0 25px 0;
+    font-family: var(--Rajdhani);
+    color: var(--White--color);
+}
+.formulaire{
+    text-align: start;
+}
+.formulaire h3{
+    color: var(--White--color);
+}
+.formulaire label{
+    margin: 15px 0;
+    font-size: 22px;
+    color: var(--grey--color);
+}
+input::placeholder{
+    font-size: 20px;
+    color: var(--grey--color);
+}
+.formulaire .lova{
+    width: 80%;
+    border: none;
+    margin: 15px 0;
+    background-color: transparent;
+    border-bottom: 3px solid var(--White--color);
+}
+.formulaire select{
+    width: 100%;
+    border: none;
+    margin: 15px 0;
+    background-color: transparent;
+    border-bottom: 3px solid var(--White--color);
+}
+#text{
+    border: 0;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 3px solid white;
+}
+.btn2{
+    margin: 15px;
+    padding: 5px 15px;
+    border: 3px solid black;
+    color: var(--White--color);
+}
+.botn{
+    margin: 35px 0;
+    text-align: center;
+}
+.confirm{
+    margin-top: 15px;
+}
+/*Fond du formulaire*/
+.fond{
+    width: 100%;
+    color: transparent;
+    padding: 100px 0 75px 0;
+    background-image: linear-gradient(135deg, #EDDEBF 0.5%, #19587D);
+}
+.fond .confirm{
+    color: transparent;
+   background-image: none;
+   background-color: transparent;
+}
+.fond h3{
+    color: transparent;
+}
+.fond label{
+    font-size: 22px;
+    color: transparent
+}
+.fond .btn2{
+    border: none;
+    margin: 15px;
+}
+.fond input{
+    border: none;
+    background-color: transparent;
+}
+/*Footer*/
+.finition{
+    display: flex;
+    padding: 5% 5%;
+    margin: 0 102px;
+    text-align: center;
+    color: var(--White--color);
+    color: var(--White--color);
+    justify-content: space-between;
+    border-left: 4px solid #BCBBBD;
+    border-right: 4px solid #BCBBBD;
+}
+.up{
+    align-self:flex-start;
+}
+.down{
+    align-self: flex-end;
+}
+.descpt{
+    width: 40%;
+    padding: 100px 0;
+}
+.descpt .petit{
+    font-size: 15px;
+    color: var(--grey--color);
+}
+.wb{
+    display: flex;
+    margin: 0 102px;
+    padding: 15px 0;
+    text-align: center;
+    justify-content: center;
+    color: var(--White--color);
+    color: var(--White--color);
+    border-left: 4px solid #BCBBBD;
+    border-right: 4px solid #BCBBBD;
+}
+footer ul{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer ul li{
+    display: block;
+}
