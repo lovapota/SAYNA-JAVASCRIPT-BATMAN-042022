@@ -34,7 +34,7 @@ body{
 .scrool{
     top: 100px;
     z-index: 3;
-    right: 50px;
+    right: 51px;
     display: flex;
     position: fixed;
     align-items: center;
@@ -59,6 +59,9 @@ body{
     text-decoration: none;
     color: var(--White--color);
     font-family: var(--Space-Grotesk);
+}
+.menu .active{
+    text-decoration: underline;
 }
 .menu a:hover{
     text-decoration: underline;
@@ -91,7 +94,6 @@ body{
     font-family: var(--Rajdhani);
     background-image: linear-gradient(45deg, #eddebf, #890009);
 }
-
 /*Batman*/
 .batman{
     margin: 0 102px;
@@ -100,9 +102,53 @@ body{
     border-left: 4px solid #BCBBBD;
     border-right: 4px solid #BCBBBD;
 }
+h1{
+    margin: 15px 0;
+    font-size: 36px;
+}
+.batman>p{
+    margin: 25px 0;
+    font-size: 22px;
+}
 .image{
     display: flex;
     justify-content: space-between;
+}
+figure{
+    margin: 100px 0;
+    position: relative;
+}
+figure>img{
+    width: 100%;
+}
+figure:hover{
+    transform: scale(1.4);
+}
+figcaption{
+    width: 97%;
+    bottom: 1%;
+    display: none;
+    padding : 10% 0;
+    position: absolute;
+    justify-content: center;
+    border: 4px solid #BCBBBD;
+
+}
+.figcaption{
+    width: 70%;
+    padding: 10% 0;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5vw;
+    background-image: linear-gradient(45deg, #eddebf56, #8900095e);
+}
+.yellow{
+    color: var(--Yellow--first);
+}
+figcaption img{
+    top: 10%;
+    left: 0%;
+    position: absolute;
 }
 /*Transition*/
 .style{
@@ -114,12 +160,20 @@ body{
 .contour{
     top: 0;
     z-index: 1;
-    height: 800px;
-    margin: 0 102px;
+    height: 4000px;
+    left: 102px;
     position: absolute;
     color: transparent;
     border-left: 4px solid #BCBBBD;
-    border-right: 4px solid #BCBBBD; 
+}
+.contour1{
+    top: 0;
+    z-index: 1;
+    height: 4000px;
+    right: 102px;
+    position: absolute;
+    color: transparent;
+    border-left: 4px solid #BCBBBD;
 }
 /*nemesis*/
 .nemesis{
@@ -133,13 +187,21 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.nemesis>p{
+    margin: 25px 0;
+    font-size: 22px;
+}
 /*Multimedia*/
 .multimedia{
+    text-align: center;
     margin: 0 102px;
     padding: 0 100px 100px 100px; 
     color: var(--White--color);
     border-left: 4px solid #BCBBBD;
     border-right: 4px solid #BCBBBD;
+}
+.multimedia h1{
+    text-align: left;
 }
 .slide{
     display: flex;
@@ -147,33 +209,43 @@ body{
     justify-content: space-between;
 }
 #action{
-    width: 50%;
-    margin-bottom: 15px;
+    width: 60%;
     display: flex;
+    margin-bottom: 50px;
     flex-direction: row;
-
 }
-.sary{
-    width: 35%;
+#sary{
+    width: 24%;
 }
+#sary img{
+    height: 100%;
+ }
 .description{
-    width: 65%;
-    padding-left: 15px;
+    width: 80%;
+    text-align: left;
+    padding: 25px 0 0 15px;
     border-radius: 0px 50px 50px 0px;
     background-image: linear-gradient(135deg, #EDDEBF 1%, #19587D);
 }
-.sary img{
-   height: 100%;
+.description span{
+    font-weight: 700;
+    color: var(--Yellow--first);
+}
+#iframe{
+    width: 100%;
 }
 /*Formule de contact*/
+.style1{
+    padding: 15% 0;
+    background-image: linear-gradient(135deg, #EDDEBF 0.5%, #19587D);
+}
 .contact{
-    top: 0;
-    left: 20%;
-    z-index: 2;
-    width: 60%;
-    position: absolute;
+    margin: 0 102px;
     text-align: center;
-    padding: 50px 0 75px 0;
+    color: var(--White--color);
+    padding: 0 200px 0 200px;
+    border-left: 4px solid #BCBBBD;
+    border-right: 4px solid #BCBBBD;
 }
 .contact h2{
     font-size: 36px;
@@ -186,6 +258,7 @@ body{
     text-align: start;
 }
 .formulaire h3{
+    margin: 20px 0;
     color: var(--White--color);
 }
 .formulaire label{
@@ -198,16 +271,16 @@ input::placeholder{
     color: var(--grey--color);
 }
 .formulaire .lova{
-    width: 80%;
+    width: 100%;
     border: none;
-    margin: 15px 0;
+    margin: 35px 0;
     background-color: transparent;
     border-bottom: 3px solid var(--White--color);
 }
 .formulaire select{
     width: 100%;
     border: none;
-    margin: 15px 0;
+    margin: 50px 0;
     background-color: transparent;
     border-bottom: 3px solid var(--White--color);
 }
@@ -220,21 +293,40 @@ input::placeholder{
 .btn2{
     margin: 15px;
     padding: 5px 15px;
-    border: 3px solid black;
     color: var(--White--color);
+    background-color: transparent;
+    border: 3px solid var(--White--color)
+}
+.btn2:hover{
+    color: var(--Yellow--white--degrad);
+    border: 3px solid var(--Yellow--white--degrad);
+    box-shadow: 0 0 5px 5px var(--Blue--white--degrad);
 }
 .botn{
     margin: 35px 0;
     text-align: center;
 }
 .confirm{
+    font-size: 20px;
     margin-top: 15px;
+    padding: 25px 50px;
+}
+#prompt{
+    width: 80%;
+    margin:auto;
+    padding: 15% 0;
+    display: none;
+    text-align: center;
+    border-radius: 50px;
+    font-size: xx-large;
+    color: var(--White--color);
+    background-image: linear-gradient(135deg, red,green);
 }
 /*Fond du formulaire*/
 .fond{
     width: 100%;
     color: transparent;
-    padding: 100px 0 75px 0;
+    padding: 100px 0 90px 0;
     background-image: linear-gradient(135deg, #EDDEBF 0.5%, #19587D);
 }
 .fond .confirm{
@@ -269,6 +361,15 @@ input::placeholder{
     border-left: 4px solid #BCBBBD;
     border-right: 4px solid #BCBBBD;
 }
+#citation{
+    font-size: xx-large;
+}
+#auteur{
+    font-size: xx-large;
+}
+#date{
+    font-size: x-large;
+}
 .up{
     align-self:flex-start;
 }
@@ -293,6 +394,9 @@ input::placeholder{
     color: var(--White--color);
     border-left: 4px solid #BCBBBD;
     border-right: 4px solid #BCBBBD;
+}
+.wbtext{
+    font-size: 22px;
 }
 footer ul{
     width: 30%;
