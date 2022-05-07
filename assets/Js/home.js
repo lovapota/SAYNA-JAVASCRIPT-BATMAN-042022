@@ -52,7 +52,7 @@ const sary = document.getElementById('saryS');
 //Variable boutton
 const btnNext = document.getElementById('next');
 const btnPrevious = document.getElementById('previous');
-let j = 0
+let j = -1
 btnNext.addEventListener('click', () =>{
     j++
     if(j <= data.length-1){
@@ -63,9 +63,14 @@ btnNext.addEventListener('click', () =>{
         sary.src = `${data[j].image}`;
     } else{
         j = 0
+        titreS.textContent = `${data[j].titre}`;
+        texS.textContent = `${data[j].text}`;
+        srcS.src = `${data[j].lien}`;
+        numS.textContent = `${data[j].num}`;
+        sary.src = `${data[j].image}`;
     }
 });
-let a = data.length - 1
+let a = 0
 btnPrevious.addEventListener('click', () =>{
     a--
     if(a >= 0){
@@ -75,7 +80,12 @@ btnPrevious.addEventListener('click', () =>{
         numS.textContent = `${data[a].num}`;
         sary.src = `${data[a].image}`;
     } else{
-        a = data.length -1
+        a = data.length - 1
+        titreS.textContent = `${data[a].titre}`;
+        texS.textContent = `${data[a].text}`;
+        srcS.src = `${data[a].lien}`;
+        numS.textContent = `${data[a].num}`;
+        sary.src = `${data[a].image}`;
     }
 });
 
@@ -105,6 +115,15 @@ confirmation[0].addEventListener('click', () => {
     two.style.display = 'none';
     promptM.style.display = 'block';
 });
+//Action annulation du confirm
+promptM.addEventListener('click', () => {
+    contact[0].style.display = 'block';
+    one.style.display = 'blcok';
+    two.style.display = 'blcok';
+    promptM.style.display = 'none';
+});
+
+
 
 //Animation Citation
 const dataCitation = [{

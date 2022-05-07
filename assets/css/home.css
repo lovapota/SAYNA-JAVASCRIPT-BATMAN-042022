@@ -70,6 +70,7 @@ body{
 .introduction{
     padding: 15% 0;
     margin: 0 102px;
+    font-size: x-large;
     text-align: center;
     color: var(--White--color);
     border-left: 4px solid #BCBBBD;
@@ -94,6 +95,17 @@ body{
     font-family: var(--Rajdhani);
     background-image: linear-gradient(45deg, #eddebf, #890009);
 }
+.btn1:hover{
+    opacity: 1;
+}
+/*Petit fleche*/
+.fleche{
+    margin: 0 102px;
+    padding: 50px 0;
+    text-align: center;
+    border-left: 4px solid #BCBBBD;
+    border-right:4px solid #BCBBBD;
+}
 /*Batman*/
 .batman{
     margin: 0 102px;
@@ -103,7 +115,7 @@ body{
     border-right: 4px solid #BCBBBD;
 }
 h1{
-    margin: 15px 0;
+    padding: 15px 0;
     font-size: 36px;
 }
 .batman>p{
@@ -160,8 +172,8 @@ figcaption img{
 .contour{
     top: 0;
     z-index: 1;
-    height: 4000px;
     left: 102px;
+    height: 1000px;
     position: absolute;
     color: transparent;
     border-left: 4px solid #BCBBBD;
@@ -169,7 +181,7 @@ figcaption img{
 .contour1{
     top: 0;
     z-index: 1;
-    height: 4000px;
+    height: 1000px;
     right: 102px;
     position: absolute;
     color: transparent;
@@ -237,15 +249,14 @@ figcaption img{
 /*Formule de contact*/
 .style1{
     padding: 15% 0;
-    background-image: linear-gradient(135deg, #EDDEBF 0.5%, #19587D);
+    position: relative;
+    background-image: linear-gradient(135deg, var(--Black--color) 0.5%, var(--Blue--black));
 }
 .contact{
     margin: 0 102px;
     text-align: center;
     color: var(--White--color);
     padding: 0 200px 0 200px;
-    border-left: 4px solid #BCBBBD;
-    border-right: 4px solid #BCBBBD;
 }
 .contact h2{
     font-size: 36px;
@@ -291,16 +302,19 @@ input::placeholder{
     border-bottom: 3px solid white;
 }
 .btn2{
+    text-align: center;
     margin: 15px;
-    padding: 5px 15px;
+    padding: 1px;
     color: var(--White--color);
-    background-color: transparent;
-    border: 3px solid var(--White--color)
+    background-image: linear-gradient(90deg, #eddebf, var(--Blue--black));
 }
-.btn2:hover{
-    color: var(--Yellow--white--degrad);
-    border: 3px solid var(--Yellow--white--degrad);
-    box-shadow: 0 0 5px 5px var(--Blue--white--degrad);
+.btn2 p{
+    
+    padding: 15px 25px;
+    background-image: linear-gradient(135deg,  #13435f 0 10%, #103f5a 95% 100%);
+}
+.btn2 p:hover{
+    background-image: linear-gradient(90deg, #b4b0a7, #345f79);
 }
 .botn{
     margin: 35px 0;
@@ -320,7 +334,25 @@ input::placeholder{
     border-radius: 50px;
     font-size: xx-large;
     color: var(--White--color);
-    background-image: linear-gradient(135deg, red,green);
+    background-image: linear-gradient(135deg, var(--Yellow--white--degrad),var(--Blue--white--degrad));
+}
+#one{
+    top: 0;
+    z-index: 1;
+    left: 102px;
+    height: 2000px;
+    position: absolute;
+    color: transparent;
+    border-left: 4px solid #BCBBBD;
+}
+#two{
+    top: 0;
+    z-index: 1;
+    right: 102px;
+    height: 2000px;
+    position: absolute;
+    color: transparent;
+    border-left: 4px solid #BCBBBD;
 }
 /*Fond du formulaire*/
 .fond{
