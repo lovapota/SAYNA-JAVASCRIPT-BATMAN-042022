@@ -44,6 +44,12 @@ body{
     margin: 8px 0;
     display: block;
 }
+.svg{
+    fill : var(--White--color);
+}
+.svg:hover{
+    fill : var(--Yellow--first);
+}
 /*Barre de menu*/
 .barre{
     display:flex;
@@ -144,7 +150,6 @@ figcaption{
     position: absolute;
     justify-content: center;
     border: 4px solid #BCBBBD;
-
 }
 .figcaption{
     width: 70%;
@@ -354,33 +359,6 @@ input::placeholder{
     color: transparent;
     border-left: 4px solid #BCBBBD;
 }
-/*Fond du formulaire*/
-.fond{
-    width: 100%;
-    color: transparent;
-    padding: 100px 0 90px 0;
-    background-image: linear-gradient(135deg, #EDDEBF 0.5%, #19587D);
-}
-.fond .confirm{
-    color: transparent;
-   background-image: none;
-   background-color: transparent;
-}
-.fond h3{
-    color: transparent;
-}
-.fond label{
-    font-size: 22px;
-    color: transparent
-}
-.fond .btn2{
-    border: none;
-    margin: 15px;
-}
-.fond input{
-    border: none;
-    background-color: transparent;
-}
 /*Footer*/
 .finition{
     display: flex;
@@ -416,6 +394,21 @@ input::placeholder{
     font-size: 15px;
     color: var(--grey--color);
 }
+#ROND{
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+}
+.rond{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid var(--Blue--black);
+}
+#rond1{
+    background-color: #19587D;
+}
 .wb{
     display: flex;
     margin: 0 102px;
@@ -439,4 +432,192 @@ footer ul{
 }
 footer ul li{
     display: block;
+}
+
+/*Cote responsive du site*/
+@media screen and (max-width:768px) {
+    /*scrool*/
+    .scrool{
+        top: 100px;
+        z-index: 3;
+        right: 10px;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        flex-direction: column;
+    }
+    /*barre de menu*/
+    .barre{
+        padding: 2% 5%;
+        margin: 0 60px;
+        border: 2px solid #BCBBBD;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu a{
+        font-size: 15px;
+        margin: 10px 10px 0 0;
+        text-decoration: none;
+    }
+    /*Texte d'introduction*/
+    .introduction{
+        padding: 15% 0;
+        margin: 0 60px;
+        font-size: small;
+        text-align: center;
+        border-left: 2px solid #BCBBBD;
+        border-right:2px solid #BCBBBD;
+    }
+    .center{
+        width: 70%;
+        margin: auto;
+    }
+    /*petit fleche*/
+    .fleche{
+        margin: 0 60px;
+        border-left: 2px solid #BCBBBD;
+        border-right:2px solid #BCBBBD;
+    }
+    /*Batman*/
+    .batman{
+        margin: 0 60px;
+        padding: 0 50px; 
+        text-align: justify;
+        color: var(--White--color);
+        border-left: 2px solid #BCBBBD;
+        border-right: 2px solid #BCBBBD;
+    }
+    .image{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    figure:hover{
+        transform: scale(1);
+    }
+    #bat1, #bat2 {
+        display: none;
+    }
+    /*Transition*/
+    .contour{
+        left: 60px;
+        border-left: 2px solid #BCBBBD;
+    }
+    .contour1{
+        right: 60px;
+        border-left: 2px solid #BCBBBD;
+    }
+    /*Nemesis*/
+    .nemesis{
+        margin: 0 60px;
+        padding: 0 50px; 
+        text-align: justify;
+        color: var(--White--color);
+        border-left: 2px solid #BCBBBD;
+        border-right: 2px solid #BCBBBD;
+    }
+    .imageMe{
+        display: flex;
+        flex-direction: column;
+    }
+    #neme2, #neme3{
+        display: none;
+    }
+    figcaption{
+        display: flex;
+        padding : 5% 0;
+    }
+    figcaption img{
+        top: 20%;
+        left: 10%;
+        position: absolute;
+    }
+    /*Multimedia*/
+    .multimedia{
+        margin: 0 60px; 
+        padding: 20px 0;
+        border-left: 2px solid #BCBBBD;
+        border-right: 2px solid #BCBBBD;
+    }
+    #action{
+        width: 60%;
+        margin: auto;
+        flex-direction: row;
+    }
+    .description{
+        width: 60%;
+        padding: 10px 25px;
+    }
+    #textSlide{
+        display: none;
+    }
+    #sary{
+        width: 40%;
+    }
+    #next{
+        display: none;
+    }
+    #previous{
+        display: none;
+    }
+    #iframe{
+        display: none;
+    }
+    /*contact*/
+    #one{
+        left: 60px;
+        height: 1000px;
+        border-left: 2px solid #BCBBBD;
+    }
+    #two{
+        right: 60px;
+        height: 1000px;
+        border-left: 2px solid #BCBBBD;
+    }
+    .contact{
+        margin:0;
+        padding: 0 70px 0 90px;
+    }
+    .style1{
+        padding: 5% 0;
+    }
+    /*footer*/
+    .finition{
+        padding: 2% 5%;
+        margin: 0 60px;
+        border-left: 2px solid #BCBBBD;
+        border-right: 2px solid #BCBBBD;
+    }
+    #citation, #auteur{
+        font-size: x-large;
+    }
+    #date{
+        font-size: large;
+    }
+    .up{
+        display: none;
+    }
+    .down{
+        display: none;
+    }
+    .descpt{
+        width: 80%;
+        margin: auto;
+    }
+    .descpt .petit{
+        font-size: 8px;
+        color: var(--grey--color);
+    }
+    .wb{
+        margin: 0 60px;
+        border-left: 2px solid #BCBBBD;
+        border-right: 2px solid #BCBBBD;
+    }
+    .wbtext{
+        font-size: 15px;
+    }
+    footer ul{
+        width: 50%;
+    }
 }
