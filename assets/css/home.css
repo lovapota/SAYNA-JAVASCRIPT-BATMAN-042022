@@ -6,12 +6,13 @@
 }
 /*Variables de couleur*/
 :root{
-    --Dark--black:#000000;
     --Red--red:#B11313;
+    --Dark--black:#000000;
     --Blue--black:#19587D;
     --grey--color:#C4C4C4;
     --Black--color:#0D0E09;
     --White--color:#FFFFFF;
+    --grey--ligne:#bcbbbd42;
     --Yellow--first: #FFFF00;
     --Yeloow--second: #F8F184;
     --red--white-degrad:#890008;
@@ -29,6 +30,45 @@ body{
     background-repeat: no-repeat;
     background-color: var(--Dark--black);
     background-image: url(../Illustrations/Home/Bathome1.png);
+}
+/*Animation du site*/
+h1{
+    animation-name: fadeGD;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes fadeGD{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.sTitre{
+    animation-name: fade;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes fade{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 /*Scrool*/
 .scrool{
@@ -56,7 +96,7 @@ body{
     padding: 2% 5%;
     margin: 0 102px;
     align-items: center;
-    border: 4px solid #BCBBBD;
+    border: 4px solid var(--grey--ligne);
     justify-content: space-between;
 }
 .menu a{
@@ -67,9 +107,11 @@ body{
     font-family: var(--Space-Grotesk);
 }
 .menu .active{
+    font-weight:bold;
     text-decoration: underline;
 }
 .menu a:hover{
+    font-weight:bold;
     text-decoration: underline;
 }
 /*Texte d'introduction*/
@@ -79,8 +121,8 @@ body{
     font-size: x-large;
     text-align: center;
     color: var(--White--color);
-    border-left: 4px solid #BCBBBD;
-    border-right:4px solid #BCBBBD;
+    border-right:4px solid var(--grey--ligne);
+    border-left: 4px solid var(--grey--ligne);
 }
 .center{
     width: 30%;
@@ -97,6 +139,7 @@ body{
     border: none;
     margin: 0 15px;
     padding: 10px 40px;
+    text-decoration: none;
     color: var(--White--color);
     font-family: var(--Rajdhani);
     background-image: linear-gradient(45deg, #eddebf, #890009);
@@ -109,16 +152,16 @@ body{
     margin: 0 102px;
     padding: 50px 0;
     text-align: center;
-    border-left: 4px solid #BCBBBD;
-    border-right:4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
+    border-right:4px solid var(--grey--ligne);
 }
 /*Batman*/
 .batman{
     margin: 0 102px;
     padding: 0 100px; 
     color: var(--White--color);
-    border-left: 4px solid #BCBBBD;
-    border-right: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
+    border-right: 4px solid var(--grey--ligne);
 }
 h1{
     padding: 15px 0;
@@ -135,6 +178,10 @@ h1{
 figure{
     margin: 100px 0;
     position: relative;
+    transform: scale(1);
+    animation-name: zoom;
+    animation-duration: 10s;
+    transition: transform 3s;
 }
 figure>img{
     width: 100%;
@@ -173,6 +220,8 @@ figcaption img{
 }
 .transition img{
     width: 100%;
+    animation-name: zoom;
+    animation-duration: 5s
 }
 .contour{
     top: 0;
@@ -181,7 +230,7 @@ figcaption img{
     height: 1000px;
     position: absolute;
     color: transparent;
-    border-left: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
 }
 .contour1{
     top: 0;
@@ -190,15 +239,15 @@ figcaption img{
     right: 102px;
     position: absolute;
     color: transparent;
-    border-left: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
 }
 /*nemesis*/
 .nemesis{
     margin: 0 102px;
     padding: 0 100px; 
     color: var(--White--color);
-    border-left: 4px solid #BCBBBD;
-    border-right: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
+    border-right: 4px solid var(--grey--ligne);
 }
 .imageMe{
     display: flex;
@@ -214,8 +263,8 @@ figcaption img{
     margin: 0 102px;
     padding: 0 100px 100px 100px; 
     color: var(--White--color);
-    border-left: 4px solid #BCBBBD;
-    border-right: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
+    border-right: 4px solid var(--grey--ligne);
 }
 .multimedia h1{
     text-align: left;
@@ -251,6 +300,10 @@ figcaption img{
 #iframe{
     width: 100%;
 }
+iframe{
+    animation-name: zoom;
+    animation-duration: 5s;
+}
 /*Formule de contact*/
 .style1{
     padding: 15% 0;
@@ -260,10 +313,10 @@ figcaption img{
 .contact{
     margin: 0 102px;
     text-align: center;
-    color: var(--White--color);
     padding: 0 200px 0 200px;
+    color: var(--White--color);
 }
-.contact h2{
+.contact h1{
     font-size: 36px;
     font-style: medium;
     margin: 0 0 25px 0;
@@ -290,21 +343,34 @@ input::placeholder{
     width: 100%;
     border: none;
     margin: 35px 0;
+    font-size: x-large;
+    color: var(--grey--color);
     background-color: transparent;
     border-bottom: 3px solid var(--White--color);
+}
+.lova::placeholder{
+    font-size: x-large;
 }
 .formulaire select{
     width: 100%;
     border: none;
     margin: 50px 0;
+    font-size: x-large;
+    color: var(--grey--color);
     background-color: transparent;
     border-bottom: 3px solid var(--White--color);
 }
 #text{
     border: 0;
     width: 100%;
+    height: 50px;
+    font-size: x-large;
+    color: var(--grey--color);
     background-color: transparent;
     border-bottom: 3px solid white;
+}
+#text::placeholder{
+    font-size: x-large;
 }
 .btn2{
     text-align: center;
@@ -348,7 +414,7 @@ input::placeholder{
     height: 2000px;
     position: absolute;
     color: transparent;
-    border-left: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
 }
 #two{
     top: 0;
@@ -357,7 +423,7 @@ input::placeholder{
     height: 2000px;
     position: absolute;
     color: transparent;
-    border-left: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
 }
 /*Footer*/
 .finition{
@@ -368,8 +434,8 @@ input::placeholder{
     color: var(--White--color);
     color: var(--White--color);
     justify-content: space-between;
-    border-left: 4px solid #BCBBBD;
-    border-right: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
+    border-right: 4px solid var(--grey--ligne);
 }
 #citation{
     font-size: xx-large;
@@ -417,8 +483,8 @@ input::placeholder{
     justify-content: center;
     color: var(--White--color);
     color: var(--White--color);
-    border-left: 4px solid #BCBBBD;
-    border-right: 4px solid #BCBBBD;
+    border-left: 4px solid var(--grey--ligne);
+    border-right: 4px solid var(--grey--ligne);
 }
 .wbtext{
     font-size: 22px;
@@ -450,7 +516,7 @@ footer ul li{
     .barre{
         padding: 2% 5%;
         margin: 0 60px;
-        border: 2px solid #BCBBBD;
+        border: 3px solid var(--grey--ligne);
     }
     .menu{
         display: flex;
@@ -467,8 +533,8 @@ footer ul li{
         margin: 0 60px;
         font-size: small;
         text-align: center;
-        border-left: 2px solid #BCBBBD;
-        border-right:2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
+        border-right:3px solid var(--grey--ligne);
     }
     .center{
         width: 70%;
@@ -477,8 +543,8 @@ footer ul li{
     /*petit fleche*/
     .fleche{
         margin: 0 60px;
-        border-left: 2px solid #BCBBBD;
-        border-right:2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
+        border-right:3px solid var(--grey--ligne);
     }
     /*Batman*/
     .batman{
@@ -486,8 +552,8 @@ footer ul li{
         padding: 0 50px; 
         text-align: justify;
         color: var(--White--color);
-        border-left: 2px solid #BCBBBD;
-        border-right: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
+        border-right: 3px solid var(--grey--ligne);
     }
     .image{
         display: flex;
@@ -496,17 +562,17 @@ footer ul li{
     figure:hover{
         transform: scale(1);
     }
-    #bat1, #bat2 {
+    #bat2, #bat3 {
         display: none;
     }
     /*Transition*/
     .contour{
         left: 60px;
-        border-left: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
     }
     .contour1{
         right: 60px;
-        border-left: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
     }
     /*Nemesis*/
     .nemesis{
@@ -514,8 +580,8 @@ footer ul li{
         padding: 0 50px; 
         text-align: justify;
         color: var(--White--color);
-        border-left: 2px solid #BCBBBD;
-        border-right: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
+        border-right: 3px solid var(--grey--ligne);
     }
     .imageMe{
         display: flex;
@@ -535,45 +601,18 @@ footer ul li{
     }
     /*Multimedia*/
     .multimedia{
-        margin: 0 60px; 
-        padding: 20px 0;
-        border-left: 2px solid #BCBBBD;
-        border-right: 2px solid #BCBBBD;
-    }
-    #action{
-        width: 60%;
-        margin: auto;
-        flex-direction: row;
-    }
-    .description{
-        width: 60%;
-        padding: 10px 25px;
-    }
-    #textSlide{
-        display: none;
-    }
-    #sary{
-        width: 40%;
-    }
-    #next{
-        display: none;
-    }
-    #previous{
-        display: none;
-    }
-    #iframe{
         display: none;
     }
     /*contact*/
     #one{
         left: 60px;
         height: 1000px;
-        border-left: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
     }
     #two{
         right: 60px;
         height: 1000px;
-        border-left: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
     }
     .contact{
         margin:0;
@@ -582,12 +621,15 @@ footer ul li{
     .style1{
         padding: 5% 0;
     }
+    .formulaire select{
+        font-size: large;
+    }
     /*footer*/
     .finition{
         padding: 2% 5%;
         margin: 0 60px;
-        border-left: 2px solid #BCBBBD;
-        border-right: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
+        border-right: 3px solid var(--grey--ligne);
     }
     #citation, #auteur{
         font-size: x-large;
@@ -611,8 +653,8 @@ footer ul li{
     }
     .wb{
         margin: 0 60px;
-        border-left: 2px solid #BCBBBD;
-        border-right: 2px solid #BCBBBD;
+        border-left: 3px solid var(--grey--ligne);
+        border-right: 3px solid var(--grey--ligne);
     }
     .wbtext{
         font-size: 15px;

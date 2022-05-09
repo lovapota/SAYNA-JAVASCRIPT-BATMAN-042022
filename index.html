@@ -47,8 +47,8 @@
         <p class="center">Il est vengeur. Il est la nuit.</p>
         <h2 class="center">Il est Batman</h2>
         <div class="boutton">
-            <button class="btn1">VOIR LE HEROS</button>
-            <button class="btn1">LES ADVERSAIRES</button>
+            <a class="btn1" href="#bat">VOIR LE HEROS</a>
+            <a class="btn1" href="#nem">LES ADVERSAIRES</a>
         </div>
     </div>
     <!--=====Petit fleche=========-->
@@ -56,9 +56,9 @@
         <img src="assets/Logos/flèche_down_header.png" alt="fleche">
     </div>
     <!--=======Batman au cinema========-->
-    <div class="batman">
+    <div class="batman" id="bat">
         <h1>BATMAN AU CINEMA</h1>
-        <P>Le personnage de Batman est un super héros de l'univers de DC Comics. Il a été créé par le dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le comic book Detective Colics en 1939. Batman se différencie de Superman, alors héros majeur de DC, car il n'a aucun pouvoir. Il sera porté au cinema pour la première fois en 1943 par Lewis Wilson et bénéficiera de nombreux reboot, donnant l'occasion à de multiples acteurs d'interpréter l'homme chauve souris. Voici les trois derniers :</P>
+        <P class="sTitre">Le personnage de Batman est un super héros de l'univers de DC Comics. Il a été créé par le dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le comic book Detective Colics en 1939. Batman se différencie de Superman, alors héros majeur de DC, car il n'a aucun pouvoir. Il sera porté au cinema pour la première fois en 1943 par Lewis Wilson et bénéficiera de nombreux reboot, donnant l'occasion à de multiples acteurs d'interpréter l'homme chauve souris. Voici les trois derniers :</P>
         <div class="image">
            <figure class="figure" id="bat1">
                <img src="assets/Illustrations/Home/Bathome2.png" alt="acteur">
@@ -103,9 +103,9 @@
         </div>
     </div>
     <!--=======Nemesis========-->
-    <div class="nemesis">
+    <div class="nemesis" id="nem">
         <h1>NÉMÉSIS</h1>
-        <p>Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi, il affrontera la plupart 
+        <p class="sTitre">Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi, il affrontera la plupart 
             du temps, des vilains sans capacités surnaturelles mais particulièrement violents ou 
             psychopathes. Avec son introduction dans la Justice League il aura l’occasion de se 
             mesurer à des antagonistes qui défient l’imagination et les lois de la physique. Parmis les 
@@ -179,19 +179,18 @@
         <div id="two">
         </div>        
         <div class="contact">
-            <h2>PRENOMS CONTACT</h2>
+            <h1>PRENOMS CONTACT</h1>
             <form action="#" class="formulaire">
                 <h3>ADRESSE EMAIL</h3>
                 <input class= "lova" type="email" placeholder="Adresse email">
                 <h3>NEWSLETTER</h3>
                 <label>En cochant cette case vous acceptez de recevoir l'actualité concernant les aventures de Batman</label>
                 <input type="checkbox">
-                <select name="choix" id="mrouge">
+                <select name="choix">
                     <option value="0">Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</option>
-                    <option value="1">Malagasy</option>
-                    <option value="2">Français</option>
-                    <option value="3">English</option>
-                    <option value="4">German</option>
+                    <option value="1">Par jour</option>
+                    <option value="2">Par semaine</option>
+                    <option value="3">Par mois</option>
                 </select>
                 <input id="text" type="text" placeholder="Souhaiter vous recevoir des news">
                 <div class="botn">

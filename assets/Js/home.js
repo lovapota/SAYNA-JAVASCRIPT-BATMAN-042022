@@ -1,3 +1,4 @@
+let WidthOfEcran =  window.innerWidth;//La largeur de l'ecran
 //Slide automatique pour les image
 let slide = document.getElementById('auto');
 let i = 0;
@@ -28,10 +29,10 @@ const one = document.getElementById('one');
 const two = document.getElementById('two');
 
 confirmation[0].addEventListener('click', () => {
-    contact[0].style.display = 'none';
-    one.style.display = 'none';
-    two.style.display = 'none';
-    promptM.style.display = 'block';
+            contact[0].style.display = 'none';
+            one.style.display = 'none';
+            two.style.display = 'none';
+            promptM.style.display = 'block';
 });
     //Action annulation du confirm
     promptM.addEventListener('click', () => {
@@ -40,7 +41,12 @@ confirmation[0].addEventListener('click', () => {
         two.style.display = 'flex';
         promptM.style.display = 'none';
 });
-//Animation Citation
+/**Animation du citaiton
+ * Donnne met dans un tableau diviser en des objets avec les memes proprietes
+ * -Citation
+ * -Titre du films
+ * -Auteur du citation avec date
+*/
 const dataCitation = [{
     citationB : `Soit on meurt en héros, soit on vit assez longtemps pour se voir endosser le rôle du méchant.`,
     auteurB : `The Dark Knight : Le Chevalier Noir `,
@@ -97,7 +103,6 @@ const dataCitation = [{
     const aut = document.getElementById('auteur');
     const dat = document.getElementById('date');
     const rondB = document.getElementsByClassName('rond');
-    console.log(rondB)
     let r = 0;
     function slideCitation() {
         cit.textContent = `${dataCitation[r].citationB}`;
@@ -114,13 +119,11 @@ const dataCitation = [{
                 rondB[dataCitation.length - 1].style.backgroundColor = 'transparent';
         }
     }
-    setInterval('slideCitation()', 3000);
+    setInterval('slideCitation()', 3000);//Automatise les citations tout les 3 secondes
 
 
 //Special web
-let WidthOfEcran =  window.innerWidth;
-if( WidthOfEcran >=768 ){
-//Slide avec des bouttons next et previous pour web
+//Slide dans le multimedia
 let data = [{//Donne a entre dans HTML
     titre : 'The Dark Knigth',
     num : '9',
@@ -141,10 +144,12 @@ let data = [{//Donne a entre dans HTML
     text : `Le jeune Bruce Wayne assiste impuissant au meurtre de ses parents. Profondément traumatisé, il grandit obnubilé par un désir de vengeance. La Ligue des ombres, une secte de guerriers ninja dirigée par Ra's al Ghul, se chargera de son entraînement. De retour chez lui à Gotham, avec l'aide de son majordome Alfred Pennyworth, Bruce Wayne se lance alors dans la lutte contre le crime sous le nom de Batman.`,
     lien :`https://www.youtube.com/embed/jXrFsn9pcZY`,
     image :`assets/Illustrations/Home/Bathome8.png`,
-},]
-//Variable a utilise pour web
+},];
+//Variable pour le mulitmedia
 const titreS = document.getElementById('titre');
 const numS = document.getElementById('num');
+if( WidthOfEcran >=768 ){
+//Variable pour le mulitmedia special web
 const texS = document.getElementById('textSlide');
 const srcS = document.getElementById('iframe');
 const sary = document.getElementById('saryS');
@@ -201,7 +206,7 @@ for(let b = 0; b < fig.length; b++){
     })
 };
 }else{
-    dataBat = [{
+    let dataBat = [{
         imgBat : `assets/Illustrations/Home/Bathome2.png`,
         nameBat : `Robert Pattinson`,
         date : `2022`,
@@ -221,15 +226,14 @@ for(let b = 0; b < fig.length; b++){
     }]
      //Les acteur de Batman
     const imgBa = document.querySelector('#bat1>img');
-    const nomBa = document.querySelector('figcaption>p');
-    const dateB = document.querySelector('figcaption .yellow');
-    const imgAcB = document.querySelector('figcaption img');
-    console.log(imgBa)
+    const nomBa = document.querySelector('#bat1 figcaption .figcaption>p');
+    const dateB = document.querySelector('#bat1 figcaption  .yellow');
+    const imgAcB = document.querySelector('#bat1 figcaption img');
     let v = 0;
     function changeHeros(){
             imgBa.src = `${dataBat[v].imgBat}`;
-            nomBa.textContent = `${dataBat[v].nameBat}`
-            dateB.textContent = `${dataBat[v].date}`
+            nomBa.textContent = `${dataBat[v].nameBat}`;
+            dateB.textContent = `${dataBat[v].date}`;
             imgAcB.src = `${dataBat[v].ImgAc}`;
             if (v < dataBat.length - 1) {
                     v += 1;   
@@ -238,5 +242,47 @@ for(let b = 0; b < fig.length; b++){
             }
         }
         setInterval('changeHeros()', 3000);
-    }
+    let dataNem = [{
+            imgNem : `assets/Illustrations/Home/Bathome6.png`,
+            nameNem : `The Joker`,
+            dateNem : `Health Ledger - 2008`,
+            ImgAcNem : `assets/Illustrations/Home/Heath_Ledger.png`,
+        },
+        {
+            imgNem : `assets/Illustrations/Home/Bathome7.png`,
+            nameNem : `DarkSeid`,
+            dateNem : `Ray Porter - 2020`,
+            ImgAcNem : `assets/Illustrations/Home/Ray_Porter.png`,
+        },
+        {
+            imgNem : `assets/Illustrations/Home/Bathome5.png`,
+            nameNem : `The Riddler/Edward Nashton`,
+            dateNem : `Paul Dano - 2022`,
+            ImgAcNem : `assets/Illustrations/Home/Paul_Dano.png`,
+        },]
+         //Les acteur de Batman
+        const imgNe = document.querySelector('#neme1>img');
+        const nomNe = document.querySelector('#neme1 figcaption .figcaption>p');
+        const datNe = document.querySelector('#neme1 figcaption  .yellow');
+        const imgAcNe = document.querySelector('#neme1 figcaption img');
+        console.log(imgNe);
+        console.log(nomNe.textContent);
+        console.log(datNe.textContent);
+        console.log(imgAcNe);
+        let w = 0;
+        function changeNemenis(){
+                imgNe.src = `${dataNem[w].imgNem}`;
+                nomNe.textContent = `${dataNem[w].nameNem}`;
+                datNe.textContent = `${dataNem[w].dateNem}`;
+                imgAcNe.src = `${dataNem[w].ImgAcNem}`;
+                if (w < dataNem.length - 1) {
+                        w += 1;   
+                } else {
+                        w = 0;
+                }
+            }
+            setInterval('changeNemenis()', 3000);
+}
+
+
 
